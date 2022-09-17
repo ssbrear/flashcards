@@ -1,0 +1,25 @@
+.swedish_card {
+  background-color: lightblue;
+  border: 2px solid black;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+  min-width: 300px;
+  min-height: 180px;
+}
+
+.swedish_card div {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
