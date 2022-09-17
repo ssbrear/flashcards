@@ -1,3 +1,7 @@
-fetch("/data").then((data) => {
-  return data.json;
-});
+fetch("/data")
+  .then((res) => {
+    return res.json();
+  })
+  .then((data) => {
+    console.log(data);
+  });
