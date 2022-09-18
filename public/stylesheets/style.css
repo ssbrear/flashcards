@@ -67,6 +67,14 @@ body {
   font-size: 80px;
   user-select: none;
 }
+.upArrow {
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 80px;
+  user-select: none;
+}
 
 /* Javascript is used to add/remove classes to change what currently shows */
 #categories.active .category,
