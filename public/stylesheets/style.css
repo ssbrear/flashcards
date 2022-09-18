@@ -7,6 +7,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 * {
   font-family: Arial, Helvetica, sans-serif;
@@ -18,6 +19,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 .category {
   padding: 20px;
@@ -35,7 +37,7 @@ body {
 }
 .wordContainer {
   position: relative;
-  width: 300px;
+  width: min(300px, 50vw);
   height: 200px;
   margin: auto;
   display: none;
@@ -50,30 +52,51 @@ body {
   display: none;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+.nextArrow,
+.prevArrow,
+.upArrow {
+  position: absolute;
+  font-size: 80px;
+  user-select: none;
 }
 .prevArrow {
-  position: absolute;
   left: -150px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 80px;
-  user-select: none;
 }
 .nextArrow {
-  position: absolute;
   right: -150px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 80px;
-  user-select: none;
 }
 .upArrow {
-  position: absolute;
   top: -150px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 80px;
-  user-select: none;
+}
+@media (max-width: 620px) {
+  .category {
+    font-size: 16px;
+  }
+  .wordContainer {
+    height: 100px;
+  }
+  .nextArrow,
+  .prevArrow,
+  .upArrow {
+    font-size: 40px;
+  }
+  .nextArrow {
+    right: -75px;
+  }
+  .prevArrow {
+    left: -75px;
+  }
+  .upArrow {
+    top: -75px;
+  }
 }
 
 /* Javascript is used to add/remove classes to change what currently shows */
