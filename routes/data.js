@@ -7,7 +7,7 @@ const { parse } = require("csv-parse");
 router.get("/", function (req, res, next) {
   let csvDataCategories = [];
   let csvDataWords = [];
-  fs.createReadStream("./public/data/Swedish_Nouns_-_Sheet1.csv")
+  fs.createReadStream("./public/data/Swedish_Nouns_-_Sheet2.csv")
     .pipe(parse({ delimiter: "," }))
     .on("data", function (row) {
       if (row[0] === "word") csvDataCategories = row;
